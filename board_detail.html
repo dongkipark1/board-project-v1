@@ -147,6 +147,16 @@
         .board_view .info dl dd {
             font-size: 1.2rem;
         }
+
+        .list_group {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .card_body {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     </style>
 </head>
 
@@ -196,6 +206,36 @@
             </div>
         </div>
     </div>
+
+    <div class="card-footer">
+        <b>댓글리스트</b>
+    </div>
+    <div class="list_group">
+
+
+        <!-- 댓글아이템 -->
+        <div class="list_group_item d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <div class="px-1 me-1 bg-primary text-white rounded">김**</div>
+                <div>내용이 들어가야겠지요?</div>
+            </div>
+
+            <form action="/reply/1/delete" method="post">
+                <button class="btn">🗑</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="card_body">
+        <form action="/reply/save" method="post">
+            <input type="hidden" name="boardId" value="댓글">
+            <textarea class="form-control" rows="2" name="comment"></textarea>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-outline-primary mt-1">댓글등록</button>
+            </div>
+        </form>
+    </div>
+
 </body>
 
 </html>
